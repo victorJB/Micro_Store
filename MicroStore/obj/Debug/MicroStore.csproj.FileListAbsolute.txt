@@ -1,0 +1,13 @@
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\bin\Debug\MicroStore.exe.config
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\bin\Debug\MicroStore.exe
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\bin\Debug\MicroStore.pdb
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.csprojResolveAssemblyReference.cache
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.Login.resources
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.Properties.Resources.resources
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.csproj.GenerateResource.Cache
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.exe
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.pdb
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\bin\Debug\MySql.Data.dll
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\bin\Debug\MySql.Data.xml
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.PaymentInterface.resources
+c:\users\victor\documents\visual studio 2015\Projects\MicroStore\MicroStore\obj\Debug\MicroStore.ProductsInterface.resources
