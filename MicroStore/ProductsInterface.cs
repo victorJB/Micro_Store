@@ -19,11 +19,30 @@ namespace MicroStore
         public ProductsInterface()
         {
             InitializeComponent();
+            
         }
 
         private void ProductsInterface_Load(object sender, EventArgs e)
         {
+            int i = 0;
+            int[] datos = new int[6];
+            for(i=1;i<7;i++)
+            {
+                this.conectar.Open();
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT * FROM articulo WHERE articulo_id = {0}",i), this.conectar);
+                MySqlDataReader lector = comando.ExecuteReader();
+                lector.Read();
+                datos[i-1] = Convert.ToInt32(lector.GetString(3));
+                textBox1.Text = datos[0].ToString();
+                textBox2.Text = datos[1].ToString();
+                textBox3.Text = datos[2].ToString();
+                textBox4.Text = datos[3].ToString();
+                textBox5.Text = datos[4].ToString();
+                textBox6.Text = datos[5].ToString();
+                this.conectar.Close();
+                
 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
