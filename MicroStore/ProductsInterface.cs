@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace MicroStore
 {
     public partial class ProductsInterface : Form
     {
+        public static string nombreCliente;
+        MySqlConnection conectar = new MySqlConnection("server=127.0.0.1; database=microStore; Uid=root; pwd=123456;");
+
         public ProductsInterface()
         {
             InitializeComponent();
@@ -26,6 +30,7 @@ namespace MicroStore
         {
             PaymentInterface nuevo = new PaymentInterface();
             this.Hide();
+            PaymentInterface.nombreCliente = nombreCliente;
             nuevo.ShowDialog();
             this.Close();
         }
@@ -36,6 +41,24 @@ namespace MicroStore
             this.Hide();
             nuevo.ShowDialog();
             this.Close();
+        }
+
+
+        public string LabelText3
+        {
+            get
+            {
+                return this.label1.Text;
+            }
+            set
+            {
+                this.label1.Text = value;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

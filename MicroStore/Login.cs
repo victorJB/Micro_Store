@@ -42,6 +42,9 @@ namespace MicroStore
             {
                 this.Hide();
                 ProductsInterface nuevo = new ProductsInterface();
+                nuevo.LabelText3 = "Welcome ";
+                nuevo.LabelText3 += Line1;
+                ProductsInterface.nombreCliente = Line1;
                 nuevo.ShowDialog();
                 this.conectar.Close();
                 this.Close();

@@ -12,12 +12,12 @@ namespace MicroStore
 {
     public partial class PaymentInterface : Form
     {
+        public static string nombreCliente;
+
         public PaymentInterface()
         {
             InitializeComponent();
-            comboBox1.Items.Insert(0, "Credit/Debit Card");
-            comboBox1.Items.Insert(1, "Gift code");
-            
+
         }
 
         private void PaymentInterface_Load(object sender, EventArgs e)
@@ -29,6 +29,9 @@ namespace MicroStore
         {
             MessageBox.Show("Sucessful payment");
             ProductsInterface nuevo = new ProductsInterface();
+            nuevo.LabelText3 = "Welcome ";
+            nuevo.LabelText3 += nombreCliente;
+            ProductsInterface.nombreCliente = nombreCliente;
             this.Hide();
             nuevo.ShowDialog();
             this.Close();
