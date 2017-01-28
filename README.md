@@ -6,13 +6,13 @@ Author: Victor Omar Jiménez Barajas
 
 Email: slayerhd363@gmail.com
 
-Description: A project for representation Micro Store. The user cans Login in the system and select some products of the catalog,
-after that the user needs indroduce a gift code for end his purchase.
+Description: A project to represent Micro Store. The user can Login in the system and select some products from the catalog,
+Next he has to indroduce a gift code to finish his purchase.
 
 The project was programming in C# and using Windows Forms for GUI.
 The Database is in SQL language using MySql.
 
-The user needs open the MicroStore.sln file to load the project for that is neccesary that the user has installed
+The user needs to open the MicroStore.sln file to load the project. It is neccesary to have
 Microsoft Visual Studio Community version for Windows or Mono for Linux.
 
 *
