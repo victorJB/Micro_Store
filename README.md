@@ -32,6 +32,7 @@ I select some products of the catalog and press purchase button
 
 <a href="http://s1147.photobucket.com/user/mlvictor516/media/CBQ/Products_zps5mssotut.png.html" target="_blank"><img src="http://i1147.photobucket.com/albums/o554/mlvictor516/CBQ/Products_zps5mssotut.png" border="0" alt=" photo Products_zps5mssotut.png"/></a>
 
+***
 
 Add a Gift code to finish the purchase
 
@@ -41,6 +42,7 @@ Add a Gift code to finish the purchase
 
 <a href="http://s1147.photobucket.com/user/mlvictor516/media/CBQ/sucesful_zps8k9yuuyl.png.html" target="_blank"><img src="http://i1147.photobucket.com/albums/o554/mlvictor516/CBQ/sucesful_zps8k9yuuyl.png" border="0" alt=" photo sucesful_zps8k9yuuyl.png"/></a>
 
+***
 
 We Come back to Product interface and We can see 1 less product in the available box of each purchased product.
 
