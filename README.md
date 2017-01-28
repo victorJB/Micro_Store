@@ -15,11 +15,7 @@ The Database is in SQL language using MySql.
 The user needs to open the MicroStore.sln file to load the project. It is neccesary to have
 Microsoft Visual Studio Community version for Windows or Mono for Linux.
 
-*
-*
-*
-*
-*
+***
 
 Login using user and password from DB
 
