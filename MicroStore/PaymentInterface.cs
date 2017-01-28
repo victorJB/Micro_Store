@@ -14,6 +14,7 @@ namespace MicroStore
     public partial class PaymentInterface : Form
     {
         public static string nombreCliente;
+        public static int[] productosAdquiridos = new int[6];
         MySqlConnection conectar = new MySqlConnection("server=127.0.0.1; database=microStore; Uid=root; pwd=123456;");
 
         public PaymentInterface()
@@ -44,6 +45,45 @@ namespace MicroStore
             else
             {
                 MessageBox.Show("Sucessful payment");
+                this.conectar.Close();
+                this.conectar.Open();
+                MySqlCommand comando1 = new MySqlCommand(String.Format("DELETE FROM codigoRegalo WHERE codigo_id = {0}", codigo), this.conectar);
+                MySqlDataReader lector1 = comando1.ExecuteReader();
+                lector1.Read();
+                this.conectar.Close();
+
+                int i = 0;
+
+                for(i=0;i<6;i++)
+                {
+                    if(productosAdquiridos[i] == 8)
+                    {
+
+                        this.conectar.Open();
+                        MySqlCommand comando2 = new MySqlCommand(String.Format("SELECT * FROM articulo WHERE articulo_id = {0}", i + 1), this.conectar);
+                        MySqlDataReader lector2 = comando2.ExecuteReader();
+                        
+                        if(lector2.Read() == false)
+                        {
+                            MessageBox.Show("Error");
+                        }
+
+                        else
+                        {
+                            int disponibles = Convert.ToInt32(lector2.GetString(3));
+                            disponibles = disponibles - 1;
+                            this.conectar.Close();
+                            this.conectar.Open();
+                            MySqlCommand comando3 = new MySqlCommand(String.Format("UPDATE articulo set cantidadDisponible = {0} WHERE articulo_id = {1}", disponibles, i + 1), this.conectar);
+                            MySqlDataReader lector3 = comando3.ExecuteReader();
+                            lector3.Read();
+                            this.conectar.Close();
+                        }
+
+                    }
+                }
+
+
                 ProductsInterface nuevo = new ProductsInterface();
                 nuevo.LabelText3 = "Welcome ";
                 nuevo.LabelText3 += nombreCliente;

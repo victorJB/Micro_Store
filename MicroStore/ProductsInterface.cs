@@ -52,6 +52,7 @@ namespace MicroStore
             int i = 0;
             double[] total = new double[6];
             int[] articulosSeleccionados = new int[6];
+            PaymentInterface nuevo = new PaymentInterface();
 
             articulosSeleccionados[0] = 9;
             articulosSeleccionados[1] = 9;
@@ -59,11 +60,19 @@ namespace MicroStore
             articulosSeleccionados[3] = 9;
             articulosSeleccionados[4] = 9;
             articulosSeleccionados[5] = 9;
+            PaymentInterface.productosAdquiridos[0] = 9;
+            PaymentInterface.productosAdquiridos[1] = 9;
+            PaymentInterface.productosAdquiridos[2] = 9;
+            PaymentInterface.productosAdquiridos[3] = 9;
+            PaymentInterface.productosAdquiridos[4] = 9;
+            PaymentInterface.productosAdquiridos[5] = 9;
+
 
             if (checkBox1.Checked == true)
             {
                 productos = productos + 1;
                 articulosSeleccionados[0] = 8;
+                PaymentInterface.productosAdquiridos[0] = 8;
 
             }
 
@@ -71,30 +80,35 @@ namespace MicroStore
             {
                 productos = productos + 1;
                 articulosSeleccionados[1] = 8;
+                PaymentInterface.productosAdquiridos[1] = 8;
             }
 
             if (checkBox3.Checked == true)
             {
                 productos = productos + 1;
                 articulosSeleccionados[2] = 8;
+                PaymentInterface.productosAdquiridos[2] = 8;
             }
 
             if (checkBox4.Checked == true)
             {
                 productos = productos + 1;
                 articulosSeleccionados[3] = 8;
+                PaymentInterface.productosAdquiridos[3] = 8;
             }
 
             if (checkBox5.Checked == true)
             {
                 productos = productos + 1;
                 articulosSeleccionados[4] = 8;
+                PaymentInterface.productosAdquiridos[4] = 8;
             }
 
             if (checkBox6.Checked == true)
             {
                 productos = productos + 1;
                 articulosSeleccionados[5] = 8;
+                PaymentInterface.productosAdquiridos[5] = 8;
             }
 
             for (i = 1; i < 7; i++)
@@ -112,8 +126,6 @@ namespace MicroStore
             }
 
             this.conectar.Close();
-
-            PaymentInterface nuevo = new PaymentInterface();
             this.Hide();
             PaymentInterface.nombreCliente = nombreCliente;
             nuevo.LabelText2 = "Total amount of selected products: " + productos.ToString();
