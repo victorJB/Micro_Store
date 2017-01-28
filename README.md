@@ -26,7 +26,7 @@ Login using user and password from DB
 
 <a href="http://s1147.photobucket.com/user/mlvictor516/media/CBQ/Login_zps3iusgl0o.png.html" target="_blank"><img src="http://i1147.photobucket.com/albums/o554/mlvictor516/CBQ/Login_zps3iusgl0o.png" border="0" alt=" photo Login_zps3iusgl0o.png"/></a>
 
-
+***
 I select some products of the catalog and press purchase button
 
 
