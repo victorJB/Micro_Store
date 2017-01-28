@@ -26,7 +26,8 @@ namespace MicroStore
         {
             int i = 0;
             int[] datos = new int[6];
-            for(i=1;i<7;i++)
+
+            for (i=1;i<7;i++)
             {
                 this.conectar.Open();
                 MySqlCommand comando = new MySqlCommand(String.Format("SELECT * FROM articulo WHERE articulo_id = {0}",i), this.conectar);
@@ -47,9 +48,76 @@ namespace MicroStore
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int productos = 0;
+            int i = 0;
+            double[] total = new double[6];
+            int[] articulosSeleccionados = new int[6];
+
+            articulosSeleccionados[0] = 9;
+            articulosSeleccionados[1] = 9;
+            articulosSeleccionados[2] = 9;
+            articulosSeleccionados[3] = 9;
+            articulosSeleccionados[4] = 9;
+            articulosSeleccionados[5] = 9;
+
+            if (checkBox1.Checked == true)
+            {
+                productos = productos + 1;
+                articulosSeleccionados[0] = 8;
+
+            }
+
+            if (checkBox2.Checked == true)
+            {
+                productos = productos + 1;
+                articulosSeleccionados[1] = 8;
+            }
+
+            if (checkBox3.Checked == true)
+            {
+                productos = productos + 1;
+                articulosSeleccionados[2] = 8;
+            }
+
+            if (checkBox4.Checked == true)
+            {
+                productos = productos + 1;
+                articulosSeleccionados[3] = 8;
+            }
+
+            if (checkBox5.Checked == true)
+            {
+                productos = productos + 1;
+                articulosSeleccionados[4] = 8;
+            }
+
+            if (checkBox6.Checked == true)
+            {
+                productos = productos + 1;
+                articulosSeleccionados[5] = 8;
+            }
+
+            for (i = 1; i < 7; i++)
+            {
+                if(articulosSeleccionados[i-1] == 8)
+                {
+                    this.conectar.Open();
+                    MySqlCommand comando = new MySqlCommand(String.Format("SELECT * FROM articulo WHERE articulo_id = {0}", i), this.conectar);
+                    MySqlDataReader lector = comando.ExecuteReader();
+                    lector.Read();
+                    total[0] = total[0] + Convert.ToDouble(lector.GetString(2));
+                    this.conectar.Close();
+                }
+                
+            }
+
+            this.conectar.Close();
+
             PaymentInterface nuevo = new PaymentInterface();
             this.Hide();
             PaymentInterface.nombreCliente = nombreCliente;
+            nuevo.LabelText2 = "Total amount of selected products: " + productos.ToString();
+            nuevo.LabelText3 = "Total: $" + total[0];
             nuevo.ShowDialog();
             this.Close();
         }

@@ -36,5 +36,29 @@ namespace MicroStore
             nuevo.ShowDialog();
             this.Close();
         }
+
+        public string LabelText2
+        {
+            get
+            {
+                return this.label2.Text;
+            }
+            set
+            {
+                this.label2.Text = value;
+            }
+        }
+
+        public string LabelText3
+        {
+            get
+            {
+                return this.label3.Text;
+            }
+            set
+            {
+                this.label3.Text = value;
+            }
+        }
     }
 }
