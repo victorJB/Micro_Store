@@ -33,7 +33,7 @@ I select some products of the catalog and press purchase button
 <a href="http://s1147.photobucket.com/user/mlvictor516/media/CBQ/Products_zps5mssotut.png.html" target="_blank"><img src="http://i1147.photobucket.com/albums/o554/mlvictor516/CBQ/Products_zps5mssotut.png" border="0" alt=" photo Products_zps5mssotut.png"/></a>
 
 
-Add a Gift code to end purchase
+Add a Gift code to finish the purchase
 
 
 <a href="http://s1147.photobucket.com/user/mlvictor516/media/CBQ/payment_zps8eqbbdb7.png.html" target="_blank"><img src="http://i1147.photobucket.com/albums/o554/mlvictor516/CBQ/payment_zps8eqbbdb7.png" border="0" alt=" photo payment_zps8eqbbdb7.png"/></a>
