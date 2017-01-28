@@ -16,6 +16,9 @@ The user needs open the MicroStore.sln file to load the project for that is necc
 Microsoft Visual Studio Community version for Windows or Mono for Linux.
 
 
+
+
+
 Login using user and password from DB
 
 
