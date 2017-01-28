@@ -111,27 +111,37 @@ namespace MicroStore
                 PaymentInterface.productosAdquiridos[5] = 8;
             }
 
-            for (i = 1; i < 7; i++)
+           
+            if(productos == 0)
             {
-                if(articulosSeleccionados[i-1] == 8)
-                {
-                    this.conectar.Open();
-                    MySqlCommand comando = new MySqlCommand(String.Format("SELECT * FROM articulo WHERE articulo_id = {0}", i), this.conectar);
-                    MySqlDataReader lector = comando.ExecuteReader();
-                    lector.Read();
-                    total[0] = total[0] + Convert.ToDouble(lector.GetString(2));
-                    this.conectar.Close();
-                }
-                
+                MessageBox.Show("Selecciona un producto por favor");
+                this.conectar.Close();
             }
 
-            this.conectar.Close();
-            this.Hide();
-            PaymentInterface.nombreCliente = nombreCliente;
-            nuevo.LabelText2 = "Total amount of selected products: " + productos.ToString();
-            nuevo.LabelText3 = "Total: $" + total[0];
-            nuevo.ShowDialog();
-            this.Close();
+            else
+            {
+                for (i = 1; i < 7; i++)
+                {
+                    if (articulosSeleccionados[i - 1] == 8)
+                    {
+                        this.conectar.Open();
+                        MySqlCommand comando = new MySqlCommand(String.Format("SELECT * FROM articulo WHERE articulo_id = {0}", i), this.conectar);
+                        MySqlDataReader lector = comando.ExecuteReader();
+                        lector.Read();
+                        total[0] = total[0] + Convert.ToDouble(lector.GetString(2));
+                        this.conectar.Close();
+                    }
+
+                }
+
+                this.conectar.Close();
+                this.Hide();
+                PaymentInterface.nombreCliente = nombreCliente;
+                nuevo.LabelText2 = "Total amount of selected products: " + productos.ToString();
+                nuevo.LabelText3 = "Total: $" + total[0];
+                nuevo.ShowDialog();
+                this.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
